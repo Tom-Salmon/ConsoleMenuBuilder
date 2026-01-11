@@ -27,7 +27,7 @@ namespace Ex04.Menus.Events
         {
             Console.Clear();
             OnSelected();
-            Console.WriteLine("Press any key to return to continue...");
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
 

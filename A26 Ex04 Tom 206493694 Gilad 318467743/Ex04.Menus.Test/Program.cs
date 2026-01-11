@@ -80,17 +80,29 @@ namespace Ex04.Menus.Test
         }
         private static void countLowercase_Selected()
         {
-            Console.WriteLine("Please enter a string:");
-            string userInput = Console.ReadLine();
-            int lowercaseCount = 0;
-            foreach (char c in userInput)
+            string input;
+            Console.WriteLine("Please enter a sentence:");
+            
+            do
             {
-                if (char.IsLower(c))
+                input = Console.ReadLine();
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Input cannot be empty. Please try again:");
+                }
+            }
+            while (string.IsNullOrEmpty(input));
+
+            int lowercaseCount = 0;
+            foreach (char letter in input)
+            {
+                if (char.IsLower(letter))
                 {
                     lowercaseCount++;
                 }
             }
-            Console.WriteLine($"Number of lowercase letters: {lowercaseCount}");
+
+            Console.WriteLine($"The number of lowercase letters in the string is: {lowercaseCount}");
         }
     }
 }

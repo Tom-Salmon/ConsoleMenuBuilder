@@ -22,7 +22,7 @@ namespace Ex04.Menus.Interfaces
             {
                 listener.OnSelected();
             }
-            Console.WriteLine("Press any key to return to continue...");
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
 

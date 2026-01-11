@@ -11,10 +11,20 @@ namespace Ex04.Menus.Test
     {
         public void OnSelected()
         {
+            string input;
             Console.WriteLine("Please enter a sentence:");
-            string input = Console.ReadLine();
-            int lowercaseCount = 0;
+            
+            do
+            {
+                input = Console.ReadLine();
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Input cannot be empty. Please try again:");
+                }
+            }
+            while (string.IsNullOrEmpty(input));
 
+            int lowercaseCount = 0;
             foreach (char letter in input)
             {
                 if (char.IsLower(letter))

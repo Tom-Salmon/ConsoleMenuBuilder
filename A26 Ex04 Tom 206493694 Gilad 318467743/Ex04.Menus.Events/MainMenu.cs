@@ -8,7 +8,7 @@ namespace Ex04.Menus.Events
 {
 	public class MainMenu : MenuItem
 	{
-		List<MenuItem> m_MenuItems;
+		private List<MenuItem> m_MenuItems;
 		private string m_ExitWord = "Back";
 		public string ExitWord
 		{
@@ -52,7 +52,7 @@ namespace Ex04.Menus.Events
 				{
 					if (userInput == 0)
 					{
-						userWantsToQuit |= true;
+						userWantsToQuit = true;
 					}
 					else 
 					{

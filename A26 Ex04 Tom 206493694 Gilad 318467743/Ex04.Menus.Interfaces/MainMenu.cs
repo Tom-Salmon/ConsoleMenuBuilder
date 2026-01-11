@@ -9,7 +9,7 @@ namespace Ex04.Menus.Interfaces
 {
     public class MainMenu : MenuItem
     {
-        List<MenuItem> m_MenuItems;
+        private List<MenuItem> m_MenuItems;
         private string m_ExitWord = "Back";
         public string ExitWord
         {
@@ -53,7 +53,7 @@ namespace Ex04.Menus.Interfaces
                 {
                     if (userInput == 0)
                     {
-                        userWantsToQuit |= true;
+                        userWantsToQuit = true;
                     }
                     else
                     {
