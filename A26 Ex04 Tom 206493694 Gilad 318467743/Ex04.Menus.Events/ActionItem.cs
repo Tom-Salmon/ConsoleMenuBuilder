@@ -9,7 +9,7 @@ namespace Ex04.Menus.Events
 {
     public class ActionItem : MenuItem
     {
-        public event Action m_Selected;
+        public event Action Selected;
 
 		public ActionItem(string i_Title) : base(i_Title)
 		{
@@ -17,9 +17,9 @@ namespace Ex04.Menus.Events
 
 		protected virtual void OnSelected()
         {
-            if (m_Selected != null)
+            if (Selected != null)
             {
-                m_Selected.Invoke();
+                Selected.Invoke();
             }
         }
 
@@ -27,6 +27,8 @@ namespace Ex04.Menus.Events
         {
             Console.Clear();
             OnSelected();
+            Console.WriteLine("Press any key to return to continue...");
+            Console.ReadKey();
         }
 
     }
