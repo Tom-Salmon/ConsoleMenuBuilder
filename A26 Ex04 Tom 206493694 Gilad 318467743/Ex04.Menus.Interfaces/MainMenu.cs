@@ -10,6 +10,18 @@ namespace Ex04.Menus.Interfaces
     public class MainMenu : MenuItem
     {
         List<MenuItem> m_MenuItems;
+        private string m_ExitWord = "Back";
+        public string ExitWord
+        {
+            get
+            {
+                return m_ExitWord;
+            }
+            set
+            {
+                m_ExitWord = value;
+            }
+        }
         public MainMenu(string i_Title) : base(i_Title)
         {
             m_MenuItems = new List<MenuItem>();
@@ -35,7 +47,7 @@ namespace Ex04.Menus.Interfaces
                     Console.WriteLine($"{i + 1}. {m_MenuItems[i].Title}");
                 }
 
-                Console.WriteLine("0. Back/Exit");
+                Console.WriteLine($"0. {ExitWord}");
                 Console.WriteLine($"Please enter your choice (1-{m_MenuItems.Count} or 0 to exit):");
                 if (int.TryParse(Console.ReadLine(), out int userInput) && userInput >= 0 && userInput <= m_MenuItems.Count)
                 {
