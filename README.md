@@ -28,10 +28,16 @@ public interface ISelectedObserver
 }
 ```
 
+**Observer implementations in Test project:**
+- `ShowDate` - Displays current date
+- `ShowTime` - Displays current time
+- `ShowVersion` - Displays app version
+- `CountLowercase` - Counts lowercase letters in user input
+
 **Usage:**
 ```csharp
 ActionItem menuItem = new ActionItem("Show Date");
-menuItem.AddListener(new ShowDateObserver());
+menuItem.AddListener(new ShowDate());
 ```
 
 ### Event-Based Approach (`Ex04.Menus.Events`)
@@ -42,18 +48,38 @@ Uses C# events and delegates to notify subscribers when a menu item is selected.
 public event Action Selected;
 ```
 
+**Event handlers are organized in the `EventsActions` class:**
+- `ShowDate_Selected()` - Displays current date
+- `ShowTime_Selected()` - Displays current time
+- `ShowVersion_Selected()` - Displays app version
+- `CountLowercase_Selected()` - Counts lowercase letters in user input
+
 **Usage:**
 ```csharp
+EventsActions eventsActions = new EventsActions();
 ActionItem menuItem = new ActionItem("Show Date");
-menuItem.Selected += () => Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy"));
+menuItem.Selected += new Action(eventsActions.ShowDate_Selected);
 ```
 
 ## Class Hierarchy
 
+### Menu Libraries
 ```
 MenuItem (abstract)
 ??? MainMenu      - Container for sub-menu items with navigation
 ??? ActionItem    - Executable menu item that triggers observers/events
+```
+
+### Test Project
+```
+Program           - Entry point
+MenuBuilder       - Factory class that creates both menu implementations
+EventsActions     - Contains event handler methods for Events-based menu
+ISelectedObserver implementations:
+??? ShowDate
+??? ShowTime
+??? ShowVersion
+??? CountLowercase
 ```
 
 ## Features
@@ -61,8 +87,21 @@ MenuItem (abstract)
 - Hierarchical menu navigation
 - Customizable exit/back text
 - Clear screen on menu transitions
-- Input validation for menu selections
+- Input validation for menu selections and user input
 - Support for multiple observers per action item
+- Centralized menu creation via `MenuBuilder` class
+
+## Demo Menu Structure
+
+```
+Main Menu
+??? Version and Lowercase
+?   ??? Show Version
+?   ??? Count Lowercase
+??? Show Current Date/Time
+    ??? Show Date
+    ??? Show Time
+```
 
 ## Getting Started
 
@@ -82,22 +121,47 @@ MenuItem (abstract)
 ## Example
 
 ```csharp
-// Create main menu
-MainMenu mainMenu = new MainMenu("Main Menu");
+// Using MenuBuilder to create menus
+MenuBuilder menuBuilder = new MenuBuilder();
+Interfaces.MenuItem interfacesMenu = menuBuilder.CreateInterfacesMenu();
+Events.MenuItem eventsMenu = menuBuilder.CreateEventsMenu();
+
+// Execute menus sequentially
+interfacesMenu.Execute();
+eventsMenu.Execute();
+```
+
+### Creating a Custom Menu (Interfaces approach)
+
+```csharp
+// Create menu structure
+Interfaces.MainMenu mainMenu = new Interfaces.MainMenu("My Menu");
+Interfaces.ActionItem action = new Interfaces.ActionItem("Say Hello");
+
 mainMenu.ExitWord = "Exit";
+mainMenu.AddMenuItem(action);
 
-// Create sub-menu
-MainMenu subMenu = new MainMenu("Options");
-ActionItem action = new ActionItem("Say Hello");
+// Add observer
+action.AddListener(new MyCustomObserver());
 
-// Build menu structure
-mainMenu.AddMenuItem(subMenu);
-subMenu.AddMenuItem(action);
+// Run menu
+mainMenu.Execute();
+```
 
-// Add observer (Interfaces version)
-action.AddListener(new HelloObserver());
+### Creating a Custom Menu (Events approach)
 
-// Execute menu
+```csharp
+// Create menu structure
+Events.MainMenu mainMenu = new Events.MainMenu("My Menu");
+Events.ActionItem action = new Events.ActionItem("Say Hello");
+
+mainMenu.ExitWord = "Exit";
+mainMenu.AddMenuItem(action);
+
+// Subscribe to event
+action.Selected += () => Console.WriteLine("Hello!");
+
+// Run menu
 mainMenu.Execute();
 ```
 
