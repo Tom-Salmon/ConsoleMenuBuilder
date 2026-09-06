@@ -1,0 +1,528 @@
+/* ממשק בעברית, כיוון RTL. עיצוב כהה ושקט כדי שהמודל יישאר במרכז תשומת הלב. */
+
+:root {
+  --bg: #0e1116;
+  --panel: rgba(18, 22, 29, 0.94);
+  --panel-soft: rgba(30, 36, 46, 0.9);
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #e8ecf1;
+  --muted: #9aa5b4;
+  --accent: #37b6ff;
+  --accent-dim: rgba(55, 182, 255, 0.16);
+  --error: #ff4d5e;
+  --warning: #ffb020;
+  --note: #7dd3a0;
+  --radius: 10px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Assistant', 'Rubik', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  direction: rtl;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+}
+
+.viewport-canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.label-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /*
+   * CSS2DRenderer ממקם כל תווית ב-transform ביחס למיקום הסטטי שלה, ומניח
+   * שהמיקום הזה הוא הפינה השמאלית-עליונה. תחת direction: rtl של הממשק המיקום
+   * הסטטי עובר לקצה הימני והתוויות נזרקות אל מחוץ למסך, ולכן שכבת התוויות
+   * מוחזרת ל-ltr והתוכן העברי מוחזר ל-rtl ברמת התווית עצמה.
+   */
+  direction: ltr;
+}
+
+.label-layer > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  direction: rtl;
+}
+
+/* ---------- תוויות בתוך הסצנה ---------- */
+
+.dim-label,
+.opening-label,
+.measure-label,
+.trace-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.dim-label {
+  color: #dce6ff;
+  background: rgba(31, 45, 120, 0.86);
+  border: 1px solid rgba(120, 150, 255, 0.5);
+}
+
+.opening-label {
+  color: #ffe9c9;
+  background: rgba(120, 66, 10, 0.86);
+  border: 1px solid rgba(255, 178, 80, 0.45);
+}
+
+.measure-label {
+  color: #1a1400;
+  background: #ffc400;
+  font-size: 13px;
+}
+
+.trace-label {
+  color: #002d36;
+  background: #00e5ff;
+}
+
+.room-label {
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+  white-space: pre-line;
+  color: #eaf2ff;
+  background: rgba(10, 14, 20, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 10px;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- כוונת ---------- */
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.crosshair::before,
+.crosshair::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+.crosshair::before {
+  left: 50%;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  margin-left: -0.75px;
+}
+.crosshair::after {
+  top: 50%;
+  left: 0;
+  height: 1.5px;
+  width: 100%;
+  margin-top: -0.75px;
+}
+.crosshair.hit::before,
+.crosshair.hit::after {
+  background: #ffc400;
+}
+
+/* ---------- לוח הצד ---------- */
+
+.panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 306px;
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  font-size: 13px;
+}
+
+.panel header {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.panel .sub {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.section {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 14px 12px;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h2 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+button:hover {
+  background: rgba(55, 182, 255, 0.14);
+  border-color: rgba(55, 182, 255, 0.4);
+}
+
+button.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: #cdefff;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.toggle input {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+.toggle .swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  flex: none;
+}
+
+.toggle .count {
+  margin-inline-start: auto;
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.slider {
+  display: block;
+  margin: 8px 0 2px;
+}
+
+.slider span {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 11.5px;
+  margin-bottom: 3px;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+/* ---------- כרטיס מידע ---------- */
+
+.info-card {
+  position: absolute;
+  bottom: 14px;
+  right: 336px;
+  max-width: 330px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 11px 13px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.info-card[hidden] {
+  display: none;
+}
+
+.info-card .title {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.info-card .meta {
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.info-card .note {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+  color: var(--warning);
+  font-size: 11px;
+}
+
+/* ---------- סרגל תחתון ---------- */
+
+.status {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  backdrop-filter: blur(12px);
+}
+
+.status strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---------- לוח בדיקת התנגשויות ---------- */
+
+.clash-panel {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 372px;
+  max-height: calc(100% - 24px);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.clash-panel[hidden] {
+  display: none;
+}
+
+.clash-panel header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.clash-panel h2 {
+  margin: 0;
+  font-size: 14px;
+  flex: 1;
+}
+
+.clash-list {
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.clash {
+  display: block;
+  width: 100%;
+  text-align: right;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.clash:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--line);
+}
+
+.clash .head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.clash .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.clash.error .dot {
+  background: var(--error);
+}
+.clash.warning .dot {
+  background: var(--warning);
+}
+.clash.note .dot {
+  background: var(--note);
+}
+
+.clash .detail {
+  color: var(--muted);
+  font-size: 11.5px;
+  margin-top: 2px;
+}
+
+.clash .tag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: var(--warning);
+  border: 1px solid rgba(255, 176, 32, 0.35);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.clash-footer {
+  padding: 9px 13px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ---------- מסך פתיחה ---------- */
+
+.splash {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 11, 16, 0.86);
+  backdrop-filter: blur(4px);
+  z-index: 20;
+  cursor: pointer;
+}
+
+.splash[hidden] {
+  display: none;
+}
+
+.splash .card {
+  max-width: 520px;
+  text-align: center;
+  padding: 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.splash h1 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.splash p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.keys kbd {
+  display: inline-block;
+  min-width: 20px;
+  padding: 1px 6px;
+  margin-inline-start: 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--panel-soft);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.error-box {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  text-align: center;
+  color: var(--error);
+  font-size: 14px;
+  line-height: 1.7;
+}

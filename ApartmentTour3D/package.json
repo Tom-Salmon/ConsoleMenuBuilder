@@ -1,0 +1,25 @@
+{
+  "name": "apartment-tour-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "סיור תלת־ממדי אינטראקטיבי בדירה — כלניות 17 טירת הכרמל, טיפוס C",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "data": "python3 tools/build_apartment_json.py",
+    "verify": "python3 tools/verify_source.py --preview",
+    "verify:model": "python3 tools/verify_source.py --model"
+  },
+  "dependencies": {
+    "three": "^0.169.0",
+    "three-mesh-bvh": "^0.8.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.169.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
