@@ -1,0 +1,3865 @@
+{
+ "meta": {
+  "project_he": "כלניות 17 — טירת הכרמל",
+  "developer_he": "עמרם אברהם אמנות הבניה",
+  "apartment_type": "C",
+  "floors": "2-15",
+  "apartment_numbers": [
+   8,
+   13,
+   18,
+   23,
+   28,
+   33,
+   38,
+   43,
+   48,
+   53,
+   58,
+   63,
+   68,
+   73
+  ],
+  "revision": "0",
+  "plan_date": "04.12.25",
+  "scale": "1:50",
+  "units": "meters",
+  "axes": "X ימינה, Z דרומה, Y מעלה — כמו בתכנית במבט-על",
+  "origin_he": "פינת צפון-מערב של מעטפת הדירה כולל המרפסת",
+  "reference_level_m": 8.61,
+  "extraction": {
+   "source_pdf": "data/source-plan-type-C.pdf",
+   "pt_to_cm": 1.76389,
+   "generated_at": "2026-09-06T11:10:26+00:00",
+   "generator": "tools/build_apartment_json.py"
+  }
+ },
+ "levels": {
+  "main": {
+   "plan_elevation": 8.61,
+   "y": 0.0,
+   "label_he": "מפלס הדירה"
+  },
+  "mamad": {
+   "plan_elevation": 8.63,
+   "y": 0.02,
+   "label_he": "ממ\"ד"
+  },
+  "wet": {
+   "plan_elevation": 8.6,
+   "y": -0.01,
+   "label_he": "חדר רחצה"
+  },
+  "sun_balcony": {
+   "plan_elevation": 8.58,
+   "y": -0.03,
+   "label_he": "מרפסת שמש"
+  },
+  "service_balcony": {
+   "plan_elevation": 8.01,
+   "y": -0.6,
+   "label_he": "מסתור / מרפסת שירות"
+  }
+ },
+ "ceilings": {
+  "structural_m": 2.8,
+  "dropped_m": 2.55,
+  "parapet_m": 1.05
+ },
+ "walls": [
+  {
+   "id": "w_west",
+   "name_he": "קיר חוץ מערבי",
+   "type": "concrete_ext",
+   "axis": "v",
+   "start": {
+    "x": 0.119,
+    "z": 2.671
+   },
+   "end": {
+    "x": 0.119,
+    "z": 7.547
+   },
+   "thickness": 0.2,
+   "length": 4.876,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_north_service",
+   "name_he": "מסתור — סורג הצללה",
+   "type": "louver_screen",
+   "axis": "h",
+   "start": {
+    "x": 0.019,
+    "z": 2.691
+   },
+   "end": {
+    "x": 2.561,
+    "z": 2.691
+   },
+   "thickness": 0.04,
+   "length": 2.542,
+   "height": 2.2,
+   "openings": []
+  },
+  {
+   "id": "w_north_bed",
+   "name_he": "קיר חוץ צפוני — חדר שינה",
+   "type": "concrete_ext",
+   "axis": "h",
+   "start": {
+    "x": 2.561,
+    "z": 2.699
+   },
+   "end": {
+    "x": 5.877,
+    "z": 2.699
+   },
+   "thickness": 0.244,
+   "length": 3.316,
+   "height": 2.8,
+   "openings": [
+    "win_bedroom"
+   ]
+  },
+  {
+   "id": "w_north_mamad",
+   "name_he": "קיר חוץ צפוני — ממ\"ד",
+   "type": "concrete_mamad",
+   "axis": "h",
+   "start": {
+    "x": 5.877,
+    "z": 2.749
+   },
+   "end": {
+    "x": 9.404,
+    "z": 2.749
+   },
+   "thickness": 0.344,
+   "length": 3.527,
+   "height": 2.8,
+   "openings": [
+    "win_mamad"
+   ]
+  },
+  {
+   "id": "w_north_living",
+   "name_he": "קיר חוץ צפוני — חדר דיור",
+   "type": "concrete_ext",
+   "axis": "h",
+   "start": {
+    "x": 9.404,
+    "z": 2.724
+   },
+   "end": {
+    "x": 13.767,
+    "z": 2.724
+   },
+   "thickness": 0.294,
+   "length": 4.363,
+   "height": 2.8,
+   "openings": [
+    "door_balcony"
+   ]
+  },
+  {
+   "id": "w_east",
+   "name_he": "קיר חוץ מזרחי",
+   "type": "concrete_ext",
+   "axis": "v",
+   "start": {
+    "x": 13.667,
+    "z": 2.577
+   },
+   "end": {
+    "x": 13.667,
+    "z": 9.547
+   },
+   "thickness": 0.2,
+   "length": 6.97,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_south",
+   "name_he": "קיר חוץ דרומי",
+   "type": "concrete_ext",
+   "axis": "h",
+   "start": {
+    "x": 0.019,
+    "z": 7.419
+   },
+   "end": {
+    "x": 9.586,
+    "z": 7.419
+   },
+   "thickness": 0.256,
+   "length": 9.567,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_kitchen_west",
+   "name_he": "קיר חוץ מערבי — מטבח",
+   "type": "concrete_ext",
+   "axis": "v",
+   "start": {
+    "x": 9.4625,
+    "z": 7.291
+   },
+   "end": {
+    "x": 9.4625,
+    "z": 10.472
+   },
+   "thickness": 0.247,
+   "length": 3.181,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_kitchen_south",
+   "name_he": "קיר חוץ דרומי — מטבח",
+   "type": "concrete_ext",
+   "axis": "h",
+   "start": {
+    "x": 9.339,
+    "z": 10.3615
+   },
+   "end": {
+    "x": 12.209,
+    "z": 10.3615
+   },
+   "thickness": 0.221,
+   "length": 2.87,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_kitchen_east",
+   "name_he": "קיר מזרחי — מטבח",
+   "type": "concrete_ext",
+   "axis": "v",
+   "start": {
+    "x": 12.1355,
+    "z": 9.332
+   },
+   "end": {
+    "x": 12.1355,
+    "z": 10.472
+   },
+   "thickness": 0.297,
+   "length": 1.14,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_entry",
+   "name_he": "קיר הכניסה לדירה",
+   "type": "concrete_ext",
+   "axis": "h",
+   "start": {
+    "x": 11.987,
+    "z": 9.4395
+   },
+   "end": {
+    "x": 13.767,
+    "z": 9.4395
+   },
+   "thickness": 0.215,
+   "length": 1.78,
+   "height": 2.8,
+   "openings": [
+    "door_entry"
+   ]
+  },
+  {
+   "id": "w_bed_mamad",
+   "name_he": "קיר בין חדר השינה לממ\"ד",
+   "type": "block",
+   "axis": "v",
+   "start": {
+    "x": 6.0265,
+    "z": 2.577
+   },
+   "end": {
+    "x": 6.0265,
+    "z": 6.101
+   },
+   "thickness": 0.299,
+   "length": 3.524,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_mamad_east",
+   "name_he": "קיר ממ\"ד מזרחי",
+   "type": "concrete_mamad",
+   "axis": "v",
+   "start": {
+    "x": 9.4565,
+    "z": 2.577
+   },
+   "end": {
+    "x": 9.4565,
+    "z": 6.107
+   },
+   "thickness": 0.259,
+   "length": 3.53,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "w_mamad_south",
+   "name_he": "קיר ממ\"ד דרומי",
+   "type": "concrete_mamad",
+   "axis": "h",
+   "start": {
+    "x": 5.877,
+    "z": 5.9915
+   },
+   "end": {
+    "x": 9.586,
+    "z": 5.9915
+   },
+   "thickness": 0.219,
+   "length": 3.709,
+   "height": 2.8,
+   "openings": [
+    "door_mamad"
+   ]
+  },
+  {
+   "id": "w_service_bath",
+   "name_he": "קיר בין המסתור לחדר הרחצה",
+   "type": "block",
+   "axis": "h",
+   "start": {
+    "x": 0.019,
+    "z": 4.413
+   },
+   "end": {
+    "x": 2.814,
+    "z": 4.413
+   },
+   "thickness": 0.252,
+   "length": 2.795,
+   "height": 2.8,
+   "openings": [
+    "win_service"
+   ]
+  },
+  {
+   "id": "w_service_bed",
+   "name_he": "קיר בין המסתור לחדר השינה",
+   "type": "block",
+   "axis": "v",
+   "start": {
+    "x": 2.6875,
+    "z": 2.577
+   },
+   "end": {
+    "x": 2.6875,
+    "z": 4.539
+   },
+   "thickness": 0.253,
+   "length": 1.962,
+   "height": 2.8,
+   "openings": []
+  },
+  {
+   "id": "p_bath_east",
+   "name_he": "מחיצת גבס — חדר רחצה / מסדרון",
+   "type": "gypsum",
+   "axis": "v",
+   "start": {
+    "x": 2.811,
+    "z": 4.487
+   },
+   "end": {
+    "x": 2.811,
+    "z": 7.291
+   },
+   "thickness": 0.1,
+   "length": 2.804,
+   "height": 2.8,
+   "openings": [
+    "door_bathroom"
+   ]
+  },
+  {
+   "id": "p_bed_south",
+   "name_he": "מחיצת גבס — חדר שינה / מסדרון",
+   "type": "gypsum",
+   "axis": "h",
+   "start": {
+    "x": 2.761,
+    "z": 6.051
+   },
+   "end": {
+    "x": 5.877,
+    "z": 6.051
+   },
+   "thickness": 0.1,
+   "length": 3.116,
+   "height": 2.8,
+   "openings": [
+    "door_bedroom"
+   ]
+  },
+  {
+   "id": "b_balcony_north",
+   "name_he": "מעקה מרפסת — צפון",
+   "type": "parapet",
+   "axis": "h",
+   "start": {
+    "x": 9.404,
+    "z": 0.113
+   },
+   "end": {
+    "x": 13.787,
+    "z": 0.113
+   },
+   "thickness": 0.226,
+   "length": 4.383,
+   "height": 1.05,
+   "openings": []
+  },
+  {
+   "id": "b_balcony_west",
+   "name_he": "מעקה מרפסת — מערב",
+   "type": "parapet",
+   "axis": "v",
+   "start": {
+    "x": 9.5165,
+    "z": 0.0
+   },
+   "end": {
+    "x": 9.5165,
+    "z": 2.577
+   },
+   "thickness": 0.225,
+   "length": 2.577,
+   "height": 1.05,
+   "openings": []
+  },
+  {
+   "id": "b_balcony_east",
+   "name_he": "מעקה מרפסת — מזרח",
+   "type": "parapet",
+   "axis": "v",
+   "start": {
+    "x": 13.699,
+    "z": 0.0
+   },
+   "end": {
+    "x": 13.699,
+    "z": 2.577
+   },
+   "thickness": 0.176,
+   "length": 2.577,
+   "height": 1.05,
+   "openings": []
+  }
+ ],
+ "openings": [
+  {
+   "id": "win_bedroom",
+   "wall": "w_north_bed",
+   "kind": "window",
+   "name_he": "חלון חדר שינה",
+   "offset": 1.105,
+   "width": 1.301,
+   "sill": 1.05,
+   "height": 1.15,
+   "shutter": true,
+   "plan_note": "130 / 115 (+105)"
+  },
+  {
+   "id": "win_mamad",
+   "wall": "w_north_mamad",
+   "kind": "blast_window",
+   "name_he": "חלון הדף ממ\"ד",
+   "offset": 1.302,
+   "width": 0.84,
+   "sill": 1.1,
+   "height": 1.0,
+   "plan_note": "100 (+110)"
+  },
+  {
+   "id": "door_balcony",
+   "wall": "w_north_living",
+   "kind": "sliding",
+   "name_he": "דלת הזזה למרפסת השמש",
+   "offset": 1.232,
+   "width": 2.301,
+   "sill": 0.0,
+   "height": 2.2,
+   "leaves": 2,
+   "plan_note": "230 / 216"
+  },
+  {
+   "id": "door_entry",
+   "wall": "w_entry",
+   "kind": "door",
+   "name_he": "דלת כניסה לדירה",
+   "offset": 0.299,
+   "width": 1.0,
+   "sill": 0.0,
+   "height": 2.05,
+   "hinge": "end",
+   "toward": -1,
+   "max_deg": 95,
+   "plan_note": "100"
+  },
+  {
+   "id": "door_mamad",
+   "wall": "w_mamad_south",
+   "kind": "blast_door",
+   "name_he": "דלת הדף ממ\"ד",
+   "offset": 1.217,
+   "width": 0.825,
+   "sill": 0.0,
+   "height": 2.02,
+   "hinge": "start",
+   "toward": 1,
+   "max_deg": 100,
+   "plan_note": "80 / 202"
+  },
+  {
+   "id": "door_bedroom",
+   "wall": "p_bed_south",
+   "kind": "door",
+   "name_he": "דלת חדר שינה",
+   "offset": 2.218,
+   "width": 0.8,
+   "sill": 0.0,
+   "height": 2.05,
+   "hinge": "end",
+   "toward": -1,
+   "max_deg": 90,
+   "plan_note": "80 / 205"
+  },
+  {
+   "id": "door_bathroom",
+   "wall": "p_bath_east",
+   "kind": "door",
+   "name_he": "דלת חדר רחצה",
+   "offset": 1.771,
+   "width": 0.8,
+   "sill": 0.0,
+   "height": 2.05,
+   "hinge": "start",
+   "toward": 1,
+   "max_deg": 90,
+   "plan_note": "80 / 205"
+  },
+  {
+   "id": "win_service",
+   "wall": "w_service_bath",
+   "kind": "window",
+   "name_he": "חלון אל המסתור",
+   "offset": 0.971,
+   "width": 1.499,
+   "sill": 1.05,
+   "height": 1.15,
+   "plan_note": "150 / 115 (+105)"
+  }
+ ],
+ "rooms": [
+  {
+   "id": "living",
+   "name_he": "חדר דיור + פינת אוכל",
+   "name_en": "Living / dining",
+   "level": "main",
+   "y": 0.0,
+   "plan_elevation": 8.61,
+   "polygon": [
+    [
+     9.586,
+     2.871
+    ],
+    [
+     13.567,
+     2.871
+    ],
+    [
+     13.567,
+     9.332
+    ],
+    [
+     11.987,
+     9.332
+    ],
+    [
+     11.987,
+     10.251
+    ],
+    [
+     9.586,
+     10.251
+    ],
+    [
+     9.586,
+     7.291
+    ]
+   ],
+   "area_m2": 27.93,
+   "ceiling": {
+    "type": "structural",
+    "height": 2.8
+   },
+   "outdoor": false,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "kitchen",
+   "name_he": "מטבח",
+   "name_en": "Kitchen",
+   "level": "main",
+   "y": 0.0,
+   "plan_elevation": 8.61,
+   "polygon": [
+    [
+     9.586,
+     7.291
+    ],
+    [
+     11.987,
+     7.291
+    ],
+    [
+     11.987,
+     10.251
+    ],
+    [
+     9.586,
+     10.251
+    ]
+   ],
+   "area_m2": 7.11,
+   "ceiling": {
+    "type": "dropped",
+    "height": 2.55
+   },
+   "outdoor": false,
+   "part_of": "living",
+   "slope_percent": null
+  },
+  {
+   "id": "mamad",
+   "name_he": "ממ\"ד / חדר שינה",
+   "name_en": "Safe room / bedroom",
+   "level": "mamad",
+   "y": 0.02,
+   "plan_elevation": 8.63,
+   "polygon": [
+    [
+     6.176,
+     2.921
+    ],
+    [
+     9.327,
+     2.921
+    ],
+    [
+     9.327,
+     5.882
+    ],
+    [
+     6.176,
+     5.882
+    ]
+   ],
+   "area_m2": 9.33,
+   "ceiling": {
+    "type": "structural",
+    "height": 2.8
+   },
+   "outdoor": false,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "bedroom",
+   "name_he": "חדר שינה",
+   "name_en": "Bedroom",
+   "level": "main",
+   "y": 0.0,
+   "plan_elevation": 8.61,
+   "polygon": [
+    [
+     2.861,
+     2.821
+    ],
+    [
+     5.877,
+     2.821
+    ],
+    [
+     5.877,
+     6.001
+    ],
+    [
+     2.861,
+     6.001
+    ]
+   ],
+   "area_m2": 9.59,
+   "ceiling": {
+    "type": "structural",
+    "height": 2.8
+   },
+   "outdoor": false,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "bathroom",
+   "name_he": "חדר רחצה כללי + פינת כביסה",
+   "name_en": "Bathroom + laundry",
+   "level": "wet",
+   "y": -0.01,
+   "plan_elevation": 8.6,
+   "polygon": [
+    [
+     0.219,
+     4.539
+    ],
+    [
+     2.761,
+     4.539
+    ],
+    [
+     2.761,
+     7.251
+    ],
+    [
+     0.219,
+     7.251
+    ]
+   ],
+   "area_m2": 6.89,
+   "ceiling": {
+    "type": "dropped",
+    "height": 2.55
+   },
+   "outdoor": false,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "corridor",
+   "name_he": "מסדרון",
+   "name_en": "Corridor",
+   "level": "main",
+   "y": 0.0,
+   "plan_elevation": 8.61,
+   "polygon": [
+    [
+     2.861,
+     6.101
+    ],
+    [
+     9.586,
+     6.101
+    ],
+    [
+     9.586,
+     7.291
+    ],
+    [
+     2.861,
+     7.291
+    ]
+   ],
+   "area_m2": 8.0,
+   "ceiling": {
+    "type": "dropped",
+    "height": 2.55
+   },
+   "outdoor": false,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "service_balcony",
+   "name_he": "מסתור / מרפסת שירות",
+   "name_en": "Service balcony",
+   "level": "service_balcony",
+   "y": -0.6,
+   "plan_elevation": 8.01,
+   "polygon": [
+    [
+     0.219,
+     2.711
+    ],
+    [
+     2.561,
+     2.711
+    ],
+    [
+     2.561,
+     4.287
+    ],
+    [
+     0.219,
+     4.287
+    ]
+   ],
+   "area_m2": 3.69,
+   "ceiling": {
+    "type": "open",
+    "height": null
+   },
+   "outdoor": true,
+   "part_of": null,
+   "slope_percent": null
+  },
+  {
+   "id": "sun_balcony",
+   "name_he": "מרפסת שמש",
+   "name_en": "Sun balcony",
+   "level": "sun_balcony",
+   "y": -0.03,
+   "plan_elevation": 8.58,
+   "polygon": [
+    [
+     9.629,
+     0.226
+    ],
+    [
+     13.611,
+     0.226
+    ],
+    [
+     13.611,
+     2.577
+    ],
+    [
+     9.629,
+     2.577
+    ]
+   ],
+   "area_m2": 9.36,
+   "ceiling": {
+    "type": "open",
+    "height": null
+   },
+   "outdoor": true,
+   "part_of": null,
+   "slope_percent": 2
+  }
+ ],
+ "devices": [
+  {
+   "id": "socket_01",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.6992,
+    "y": 0.28,
+    "z": 10.251
+   },
+   "wall": "w_kitchen_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": null,
+   "height_cm": 28,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_02",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.9645,
+    "y": 0.9,
+    "z": 2.577
+   },
+   "wall": "w_north_living",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "16/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "sun_balcony"
+  },
+  {
+   "id": "switch_01",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 0.5622,
+    "y": 1.2,
+    "z": 7.291
+   },
+   "wall": "w_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "17/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "bathroom"
+  },
+  {
+   "id": "socket_03",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 10.9851,
+    "y": 0.6,
+    "z": 10.251
+   },
+   "wall": "w_kitchen_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "31/1",
+   "height_cm": 60,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_04",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.284,
+    "y": 0.9,
+    "z": 9.8346
+   },
+   "wall": "w_kitchen_east",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": "16/2",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_05",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 6.9493,
+    "y": 0.7,
+    "z": 2.921
+   },
+   "wall": "w_north_mamad",
+   "facing": [
+    0.0,
+    1.0
+   ],
+   "circuit": null,
+   "height_cm": 70,
+   "tags": [],
+   "room": "mamad"
+  },
+  {
+   "id": "switch_02",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 9.4215,
+    "y": 1.2,
+    "z": 6.101
+   },
+   "wall": "w_mamad_south",
+   "facing": [
+    0.0,
+    1.0
+   ],
+   "circuit": "12/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "corridor"
+  },
+  {
+   "id": "switch_03",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 7.9861,
+    "y": 1.2,
+    "z": 5.882
+   },
+   "wall": "w_mamad_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "13/3",
+   "height_cm": 120,
+   "tags": [],
+   "room": "mamad"
+  },
+  {
+   "id": "switch_04",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 4.7524,
+    "y": 1.2,
+    "z": 6.001
+   },
+   "wall": "p_bed_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "13/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "socket_06",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.3111,
+    "y": 0.9,
+    "z": 8.6473
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/4",
+   "height_cm": 90,
+   "tags": [
+    "D"
+   ],
+   "room": "living"
+  },
+  {
+   "id": "outlet_tv_01",
+   "system": "comms",
+   "kind": "outlet_tv",
+   "name_he": "נקודת טלוויזיה",
+   "position": {
+    "x": 6.7426,
+    "y": 0.9,
+    "z": 5.882
+   },
+   "wall": "w_mamad_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": null,
+   "height_cm": 90,
+   "tags": [
+    "TV"
+   ],
+   "room": "mamad"
+  },
+  {
+   "id": "luminaire_ceiling_01",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 7.5223,
+    "y": 2.78,
+    "z": 3.7248
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "17/1",
+   "height_cm": 278,
+   "tags": [],
+   "room": "mamad"
+  },
+  {
+   "id": "luminaire_ceiling_02",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 1.236,
+    "y": 2.53,
+    "z": 6.9794
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 253,
+   "tags": [],
+   "room": "bathroom"
+  },
+  {
+   "id": "socket_07",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.4866,
+    "y": 0.9,
+    "z": 8.1012
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/3",
+   "height_cm": 90,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_08",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.7318,
+    "y": 0.4,
+    "z": 5.1343
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "16/1",
+   "height_cm": 40,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_09",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 2.1553,
+    "y": 1.4,
+    "z": 4.539
+   },
+   "wall": "w_service_bath",
+   "facing": [
+    0.0,
+    1.0
+   ],
+   "circuit": null,
+   "height_cm": 140,
+   "tags": [],
+   "room": "bathroom"
+  },
+  {
+   "id": "comms_fiber_01",
+   "system": "comms",
+   "kind": "comms_fiber",
+   "name_he": "נקודת תקשורת — סיב אופטי",
+   "position": {
+    "x": 13.567,
+    "y": 0.9,
+    "z": 5.0649
+   },
+   "wall": "w_east",
+   "facing": [
+    -1.0,
+    0.0
+   ],
+   "circuit": null,
+   "height_cm": 90,
+   "tags": [
+    "LC/APC",
+    "N"
+   ],
+   "room": "living"
+  },
+  {
+   "id": "luminaire_ceiling_03",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 3.6656,
+    "y": 2.78,
+    "z": 3.6401
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "13/1",
+   "height_cm": 278,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "luminaire_ceiling_04",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 4.2268,
+    "y": 2.78,
+    "z": 5.2653
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 278,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "switch_05",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 6.1156,
+    "y": 1.2,
+    "z": 6.101
+   },
+   "wall": "w_mamad_south",
+   "facing": [
+    0.0,
+    1.0
+   ],
+   "circuit": "17/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "corridor"
+  },
+  {
+   "id": "socket_10",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 13.567,
+    "y": 0.9,
+    "z": 4.1194
+   },
+   "wall": "w_east",
+   "facing": [
+    -1.0,
+    0.0
+   ],
+   "circuit": "16/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_11",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 9.586,
+    "y": 1.6,
+    "z": 7.8446
+   },
+   "wall": "w_kitchen_west",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": "10/5",
+   "height_cm": 160,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_12",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 9.586,
+    "y": 0.9,
+    "z": 3.3411
+   },
+   "wall": "w_mamad_east",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": "16/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "smart_panel_01",
+   "system": "comms",
+   "kind": "smart_panel",
+   "name_he": "פנל תרחישים בית חכם",
+   "position": {
+    "x": 11.462,
+    "y": 1.4,
+    "z": 8.7482
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 140,
+   "tags": [
+    "SMART"
+   ],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_13",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.7303,
+    "y": 0.9,
+    "z": 3.5341
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/6",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "switch_06",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 2.814,
+    "y": 1.2,
+    "z": 3.6389
+   },
+   "wall": "w_service_bed",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": "17/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "luminaire_ceiling_05",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 5.4735,
+    "y": 2.53,
+    "z": 6.7053
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "12/1",
+   "height_cm": 253,
+   "tags": [],
+   "room": "corridor"
+  },
+  {
+   "id": "luminaire_ceiling_06",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 4.2985,
+    "y": 2.78,
+    "z": 4.4981
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "13/1",
+   "height_cm": 278,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "luminaire_ceiling_07",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 7.6866,
+    "y": 2.78,
+    "z": 4.4926
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "13/3",
+   "height_cm": 278,
+   "tags": [],
+   "room": "mamad"
+  },
+  {
+   "id": "socket_14",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.5342,
+    "y": 0.9,
+    "z": 4.7136
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/4",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "luminaire_ceiling_08",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 7.9729,
+    "y": 2.53,
+    "z": 6.6954
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "12/1",
+   "height_cm": 253,
+   "tags": [],
+   "room": "corridor"
+  },
+  {
+   "id": "luminaire_ceiling_09",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 12.804,
+    "y": 2.78,
+    "z": 4.1004
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 278,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_15",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.5264,
+    "y": 0.9,
+    "z": 8.4705
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/3",
+   "height_cm": 90,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "luminaire_ceiling_10",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 7.1328,
+    "y": 2.78,
+    "z": 3.7848
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "17/1",
+   "height_cm": 278,
+   "tags": [],
+   "room": "mamad"
+  },
+  {
+   "id": "luminaire_ceiling_11",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 3.307,
+    "y": 2.78,
+    "z": 3.7081
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "13/2",
+   "height_cm": 278,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "socket_16",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 13.1334,
+    "y": 0.9,
+    "z": 8.3793
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_17",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 10.7961,
+    "y": 0.9,
+    "z": 9.0211
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/2",
+   "height_cm": 90,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "socket_18",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 12.7352,
+    "y": 0.9,
+    "z": 8.4708
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "16/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "luminaire_ceiling_12",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 12.8046,
+    "y": 2.78,
+    "z": 6.1344
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 278,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_19",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 2.814,
+    "y": 0.7,
+    "z": 3.7087
+   },
+   "wall": "w_service_bed",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": null,
+   "height_cm": 70,
+   "tags": [],
+   "room": "bedroom"
+  },
+  {
+   "id": "socket_20",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.3391,
+    "y": 0.9,
+    "z": 2.1315
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/6",
+   "height_cm": 90,
+   "tags": [],
+   "room": "sun_balcony"
+  },
+  {
+   "id": "socket_21",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.527,
+    "y": 0.9,
+    "z": 9.0194
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "16/1",
+   "height_cm": 90,
+   "tags": [],
+   "room": "kitchen"
+  },
+  {
+   "id": "switch_07",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק",
+   "position": {
+    "x": 3.1184,
+    "y": 1.2,
+    "z": 6.101
+   },
+   "wall": "p_bed_south",
+   "facing": [
+    0.0,
+    1.0
+   ],
+   "circuit": "12/1",
+   "height_cm": 120,
+   "tags": [],
+   "room": "corridor"
+  },
+  {
+   "id": "socket_22",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 11.3101,
+    "y": 0.9,
+    "z": 6.6178
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "16/2",
+   "height_cm": 90,
+   "tags": [],
+   "room": "living"
+  },
+  {
+   "id": "socket_23",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 4.9073,
+    "y": 0.9,
+    "z": 1.5939
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": "10/5",
+   "height_cm": 90,
+   "tags": [],
+   "room": null
+  },
+  {
+   "id": "socket_24",
+   "system": "electrical",
+   "kind": "socket",
+   "name_he": "בית תקע",
+   "position": {
+    "x": 9.629,
+    "y": 0.9,
+    "z": 1.8599
+   },
+   "wall": "b_balcony_west",
+   "facing": [
+    1.0,
+    0.0
+   ],
+   "circuit": "10/3",
+   "height_cm": 90,
+   "tags": [],
+   "room": "sun_balcony"
+  },
+  {
+   "id": "luminaire_ceiling_13",
+   "system": "electrical",
+   "kind": "luminaire_ceiling",
+   "name_he": "נקודת מאור בתקרה",
+   "position": {
+    "x": 11.7888,
+    "y": 2.78,
+    "z": 4.3169
+   },
+   "wall": null,
+   "facing": null,
+   "circuit": null,
+   "height_cm": 278,
+   "tags": [
+    "D"
+   ],
+   "room": "living"
+  },
+  {
+   "id": "switch_08",
+   "system": "electrical",
+   "kind": "switch",
+   "name_he": "מפסק (השלמה — לא מסומן בתכנית)",
+   "position": {
+    "x": 4.829,
+    "y": 1.2,
+    "z": 6.001
+   },
+   "wall": "p_bed_south",
+   "facing": [
+    0.0,
+    -1.0
+   ],
+   "circuit": "13/2",
+   "height_cm": 120,
+   "tags": [],
+   "room": "bedroom",
+   "inferred": true
+  }
+ ],
+ "circuits": [
+  {
+   "code": "10/1",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_16"
+   ],
+   "rooms": [
+    "living"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "10/2",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_17"
+   ],
+   "rooms": [
+    "kitchen"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "10/3",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_07",
+    "socket_15",
+    "socket_24"
+   ],
+   "rooms": [
+    "kitchen",
+    "sun_balcony"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "10/4",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_06",
+    "socket_14"
+   ],
+   "rooms": [
+    "living"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "10/5",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_11",
+    "socket_23"
+   ],
+   "rooms": [
+    "kitchen"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "10/6",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_13",
+    "socket_20"
+   ],
+   "rooms": [
+    "living",
+    "sun_balcony"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "12/1",
+   "kind": "lighting",
+   "mode": "two_way",
+   "switches": [
+    "switch_02",
+    "switch_07"
+   ],
+   "loads": [
+    "luminaire_ceiling_05",
+    "luminaire_ceiling_08"
+   ],
+   "sockets": [],
+   "rooms": [
+    "corridor"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "13/1",
+   "kind": "lighting",
+   "mode": "single",
+   "switches": [
+    "switch_04"
+   ],
+   "loads": [
+    "luminaire_ceiling_03",
+    "luminaire_ceiling_06"
+   ],
+   "sockets": [],
+   "rooms": [
+    "bedroom"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "13/2",
+   "kind": "lighting",
+   "mode": "single",
+   "switches": [
+    "switch_08"
+   ],
+   "loads": [
+    "luminaire_ceiling_11"
+   ],
+   "sockets": [],
+   "rooms": [
+    "bedroom"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "13/3",
+   "kind": "lighting",
+   "mode": "single",
+   "switches": [
+    "switch_03"
+   ],
+   "loads": [
+    "luminaire_ceiling_07"
+   ],
+   "sockets": [],
+   "rooms": [
+    "mamad"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "16/1",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_02",
+    "socket_08",
+    "socket_10",
+    "socket_12",
+    "socket_18",
+    "socket_21"
+   ],
+   "rooms": [
+    "kitchen",
+    "living",
+    "sun_balcony"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "16/2",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_04",
+    "socket_22"
+   ],
+   "rooms": [
+    "living"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "17/1",
+   "kind": "lighting",
+   "mode": "two_way",
+   "switches": [
+    "switch_01",
+    "switch_05",
+    "switch_06"
+   ],
+   "loads": [
+    "luminaire_ceiling_01",
+    "luminaire_ceiling_10"
+   ],
+   "sockets": [],
+   "rooms": [
+    "bathroom",
+    "bedroom",
+    "corridor",
+    "mamad"
+   ],
+   "default_on": false
+  },
+  {
+   "code": "31/1",
+   "kind": "power",
+   "mode": "single",
+   "switches": [],
+   "loads": [],
+   "sockets": [
+    "socket_03"
+   ],
+   "rooms": [
+    "kitchen"
+   ],
+   "default_on": false
+  }
+ ],
+ "piping": [
+  {
+   "id": "hot_cold_014",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.3365,
+     "z": 4.2126
+    },
+    {
+     "x": 0.3376,
+     "z": 3.494
+    }
+   ],
+   "length": 0.72
+  },
+  {
+   "id": "hot_cold_015",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 2.4056,
+     "z": 4.0105
+    },
+    {
+     "x": 2.4119,
+     "z": 1.2969
+    }
+   ],
+   "length": 2.71
+  },
+  {
+   "id": "hot_cold_016",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 2.649,
+     "z": 4.9461
+    },
+    {
+     "x": 3.0829,
+     "z": 4.9344
+    }
+   ],
+   "length": 0.43
+  },
+  {
+   "id": "hot_cold_017",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 9.5049,
+     "z": 4.7185
+    },
+    {
+     "x": 10.1473,
+     "z": 4.7164
+    }
+   ],
+   "length": 0.64
+  },
+  {
+   "id": "hot_cold_018",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.8149,
+     "z": 4.4624
+    },
+    {
+     "x": 0.8011,
+     "z": 1.9065
+    }
+   ],
+   "length": 2.56
+  },
+  {
+   "id": "hot_cold_019",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 9.4996,
+     "z": 8.791
+    },
+    {
+     "x": 9.4996,
+     "z": 7.7326
+    }
+   ],
+   "length": 1.06
+  },
+  {
+   "id": "hot_cold_020",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 12.7889,
+     "z": 2.5616
+    },
+    {
+     "x": 12.7889,
+     "z": 1.9287
+    },
+    {
+     "x": 13.4122,
+     "z": 1.9097
+    }
+   ],
+   "length": 1.26
+  },
+  {
+   "id": "hot_cold_030",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 10.8024,
+     "z": 9.8165
+    },
+    {
+     "x": 9.562,
+     "z": 9.8165
+    }
+   ],
+   "length": 1.24
+  },
+  {
+   "id": "hot_cold_038",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 2.3431,
+     "z": 5.7366
+    },
+    {
+     "x": 2.3431,
+     "z": 5.3218
+    }
+   ],
+   "length": 0.41
+  },
+  {
+   "id": "hot_cold_044",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.672,
+     "z": 6.2489
+    },
+    {
+     "x": 0.672,
+     "z": 4.5587
+    }
+   ],
+   "length": 1.69
+  },
+  {
+   "id": "hot_cold_051",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.2053,
+     "z": 6.0266
+    },
+    {
+     "x": 0.8953,
+     "z": 6.0266
+    }
+   ],
+   "length": 0.69
+  },
+  {
+   "id": "hot_cold_059",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.4413,
+     "z": 6.8722
+    },
+    {
+     "x": 0.4413,
+     "z": 7.2617
+    }
+   ],
+   "length": 0.39
+  },
+  {
+   "id": "hot_cold_066",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.8456,
+     "z": 6.4722
+    },
+    {
+     "x": 0.8456,
+     "z": 7.2617
+    }
+   ],
+   "length": 0.79
+  },
+  {
+   "id": "hot_cold_072",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.6953,
+     "z": 6.3854
+    },
+    {
+     "x": 0.2053,
+     "z": 6.3854
+    }
+   ],
+   "length": 0.49
+  },
+  {
+   "id": "hot_cold_079",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.5387,
+     "z": 4.8455
+    },
+    {
+     "x": 0.1757,
+     "z": 4.8688
+    }
+   ],
+   "length": 0.36
+  },
+  {
+   "id": "hot_cold_100",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 2.1452,
+     "z": 5.9599
+    },
+    {
+     "x": 2.1717,
+     "z": 5.98
+    },
+    {
+     "x": 1.9187,
+     "z": 6.27
+    },
+    {
+     "x": 1.0668,
+     "z": 6.27
+    }
+   ],
+   "length": 1.27
+  },
+  {
+   "id": "hot_cold_101",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 10.8585,
+     "z": 10.1573
+    },
+    {
+     "x": 11.0807,
+     "z": 10.6071
+    },
+    {
+     "x": 11.667,
+     "z": 10.6071
+    }
+   ],
+   "length": 1.09
+  },
+  {
+   "id": "hot_cold_103",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 11.8724,
+     "z": 9.8165
+    },
+    {
+     "x": 10.8627,
+     "z": 9.8165
+    }
+   ],
+   "length": 1.01
+  },
+  {
+   "id": "hot_cold_118",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 9.9007,
+     "z": 10.2218
+    },
+    {
+     "x": 9.9007,
+     "z": 9.3318
+    }
+   ],
+   "length": 0.89
+  },
+  {
+   "id": "hot_cold_124",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 9.6171,
+     "z": 9.3191
+    },
+    {
+     "x": 8.9852,
+     "z": 9.4027
+    },
+    {
+     "x": 8.7704,
+     "z": 9.4027
+    }
+   ],
+   "length": 0.85
+  },
+  {
+   "id": "hot_cold_129",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.636,
+     "z": 4.6857
+    },
+    {
+     "x": 0.6445,
+     "z": 4.6529
+    },
+    {
+     "x": 1.1515,
+     "z": 4.7947
+    },
+    {
+     "x": 1.5515,
+     "z": 4.7905
+    }
+   ],
+   "length": 0.96
+  },
+  {
+   "id": "hot_cold_142",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 0.5969,
+     "z": 6.8341
+    },
+    {
+     "x": 0.5863,
+     "z": 6.8024
+    },
+    {
+     "x": 1.0213,
+     "z": 6.6764
+    },
+    {
+     "x": 1.4901,
+     "z": 6.6764
+    }
+   ],
+   "length": 0.96
+  },
+  {
+   "id": "hot_cold_143",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 12.9265,
+     "z": 2.206
+    },
+    {
+     "x": 12.7846,
+     "z": 2.1658
+    },
+    {
+     "x": 12.3412,
+     "z": 2.1626
+    }
+   ],
+   "length": 0.59
+  },
+  {
+   "id": "hot_cold_158",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 10.7114,
+     "z": 2.0145
+    },
+    {
+     "x": 10.0965,
+     "z": 2.0145
+    },
+    {
+     "x": 9.851,
+     "z": 2.3224
+    }
+   ],
+   "length": 1.01
+  },
+  {
+   "id": "hot_cold_159",
+   "system": "hot_cold",
+   "name_he": "מים חמים/קרים וגז",
+   "radius": 0.02,
+   "points": [
+    {
+     "x": 13.0122,
+     "z": 2.4124
+    },
+    {
+     "x": 13.0894,
+     "z": 2.2558
+    },
+    {
+     "x": 13.0894,
+     "z": 2.4124
+    },
+    {
+     "x": 13.0122,
+     "z": 2.4124
+    }
+   ],
+   "length": 0.41
+  },
+  {
+   "id": "drain_004",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 1.9918,
+     "z": 5.9155
+    },
+    {
+     "x": 1.9907,
+     "z": 6.5283
+    },
+    {
+     "x": 1.9314,
+     "z": 6.5283
+    },
+    {
+     "x": 1.9357,
+     "z": 5.9176
+    },
+    {
+     "x": 1.9156,
+     "z": 5.9007
+    }
+   ],
+   "length": 1.31
+  },
+  {
+   "id": "drain_006",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 11.8576,
+     "z": 10.1996
+    },
+    {
+     "x": 11.8576,
+     "z": 10.1393
+    },
+    {
+     "x": 9.7631,
+     "z": 10.1404
+    },
+    {
+     "x": 9.7631,
+     "z": 10.1996
+    },
+    {
+     "x": 11.8576,
+     "z": 10.1996
+    }
+   ],
+   "length": 4.31
+  },
+  {
+   "id": "drain_007",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 9.7419,
+     "z": 7.1209
+    },
+    {
+     "x": 9.6816,
+     "z": 7.1209
+    },
+    {
+     "x": 9.6816,
+     "z": 10.1192
+    },
+    {
+     "x": 9.7419,
+     "z": 10.1192
+    },
+    {
+     "x": 9.7419,
+     "z": 7.1209
+    }
+   ],
+   "length": 6.12
+  },
+  {
+   "id": "drain_008",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 9.6615,
+     "z": 7.0987
+    },
+    {
+     "x": 9.6615,
+     "z": 7.0394
+    },
+    {
+     "x": 3.7433,
+     "z": 7.0394
+    },
+    {
+     "x": 3.7433,
+     "z": 7.0998
+    },
+    {
+     "x": 9.6615,
+     "z": 7.0998
+    }
+   ],
+   "length": 11.96
+  },
+  {
+   "id": "drain_009",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 3.7221,
+     "z": 6.6436
+    },
+    {
+     "x": 3.7211,
+     "z": 7.0183
+    },
+    {
+     "x": 3.6618,
+     "z": 7.0183
+    },
+    {
+     "x": 3.6618,
+     "z": 6.6436
+    },
+    {
+     "x": 3.7221,
+     "z": 6.5156
+    },
+    {
+     "x": 3.7221,
+     "z": 6.1811
+    },
+    {
+     "x": 3.6618,
+     "z": 6.1811
+    },
+    {
+     "x": 3.6618,
+     "z": 6.5156
+    },
+    {
+     "x": 3.7211,
+     "z": 6.5156
+    }
+   ],
+   "length": 1.74
+  },
+  {
+   "id": "drain_010",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 5.7531,
+     "z": 6.0996
+    },
+    {
+     "x": 3.7433,
+     "z": 6.0996
+    },
+    {
+     "x": 3.7433,
+     "z": 6.16
+    },
+    {
+     "x": 7.4612,
+     "z": 6.16
+    },
+    {
+     "x": 7.4612,
+     "z": 6.1007
+    },
+    {
+     "x": 5.8811,
+     "z": 6.0996
+    }
+   ],
+   "length": 7.43
+  },
+  {
+   "id": "drain_011",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 7.5417,
+     "z": 5.8202
+    },
+    {
+     "x": 7.4824,
+     "z": 5.8202
+    },
+    {
+     "x": 7.4835,
+     "z": 6.0785
+    },
+    {
+     "x": 7.5427,
+     "z": 6.0785
+    },
+    {
+     "x": 7.5427,
+     "z": 5.8202
+    }
+   ],
+   "length": 0.64
+  },
+  {
+   "id": "drain_012",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 7.8359,
+     "z": 5.8001
+    },
+    {
+     "x": 7.8359,
+     "z": 5.7398
+    },
+    {
+     "x": 7.5628,
+     "z": 5.7398
+    },
+    {
+     "x": 7.5628,
+     "z": 5.8001
+    },
+    {
+     "x": 7.8359,
+     "z": 5.8001
+    }
+   ],
+   "length": 0.67
+  },
+  {
+   "id": "drain_014",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 2.0129,
+     "z": 6.5505
+    },
+    {
+     "x": 2.0129,
+     "z": 6.6098
+    },
+    {
+     "x": 3.628,
+     "z": 6.6098
+    },
+    {
+     "x": 3.628,
+     "z": 6.5494
+    },
+    {
+     "x": 2.0129,
+     "z": 6.5494
+    }
+   ],
+   "length": 3.35
+  },
+  {
+   "id": "drain_016",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 13.4694,
+     "z": 9.1572
+    },
+    {
+     "x": 13.5287,
+     "z": 9.1572
+    },
+    {
+     "x": 13.5287,
+     "z": 8.0449
+    },
+    {
+     "x": 13.4683,
+     "z": 8.0449
+    },
+    {
+     "x": 13.4683,
+     "z": 9.1572
+    }
+   ],
+   "length": 2.34
+  },
+  {
+   "id": "drain_017",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 11.8787,
+     "z": 10.1192
+    },
+    {
+     "x": 11.938,
+     "z": 10.1192
+    },
+    {
+     "x": 11.9369,
+     "z": 9.2598
+    },
+    {
+     "x": 11.8777,
+     "z": 9.2598
+    },
+    {
+     "x": 11.8777,
+     "z": 10.1192
+    }
+   ],
+   "length": 1.84
+  },
+  {
+   "id": "drain_018",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 13.0566,
+     "z": 9.2387
+    },
+    {
+     "x": 13.4472,
+     "z": 9.2387
+    },
+    {
+     "x": 13.4472,
+     "z": 9.1794
+    },
+    {
+     "x": 11.9592,
+     "z": 9.1783
+    },
+    {
+     "x": 11.9592,
+     "z": 9.2376
+    },
+    {
+     "x": 12.9296,
+     "z": 9.2387
+    }
+   ],
+   "length": 2.97
+  },
+  {
+   "id": "drain_019",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 13.5287,
+     "z": 8.0449
+    },
+    {
+     "x": 13.5287,
+     "z": 4.1809
+    },
+    {
+     "x": 13.4694,
+     "z": 4.1809
+    },
+    {
+     "x": 13.4683,
+     "z": 7.9168
+    },
+    {
+     "x": 13.5287,
+     "z": 7.9168
+    }
+   ],
+   "length": 7.72
+  },
+  {
+   "id": "drain_020",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 5.8473,
+     "z": 6.0658
+    },
+    {
+     "x": 5.8473,
+     "z": 4.5206
+    }
+   ],
+   "length": 1.55
+  },
+  {
+   "id": "drain_021",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 5.7869,
+     "z": 4.5206
+    },
+    {
+     "x": 5.7869,
+     "z": 6.0658
+    }
+   ],
+   "length": 1.55
+  },
+  {
+   "id": "drain_031",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 12.229,
+     "z": 2.8008
+    },
+    {
+     "x": 12.229,
+     "z": 4.2571
+    }
+   ],
+   "length": 1.46
+  },
+  {
+   "id": "drain_035",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 12.229,
+     "z": 4.0168
+    },
+    {
+     "x": 12.229,
+     "z": 8.0925
+    }
+   ],
+   "length": 4.08
+  },
+  {
+   "id": "drain_038",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 12.229,
+     "z": 7.8522
+    },
+    {
+     "x": 12.229,
+     "z": 9.3932
+    }
+   ],
+   "length": 1.54
+  },
+  {
+   "id": "drain_041",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 13.5371,
+     "z": 6.6531
+    },
+    {
+     "x": 13.5371,
+     "z": 4.7153
+    }
+   ],
+   "length": 1.94
+  },
+  {
+   "id": "drain_042",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 9.5165,
+     "z": 4.8349
+    },
+    {
+     "x": 13.6567,
+     "z": 4.8349
+    }
+   ],
+   "length": 4.14
+  },
+  {
+   "id": "drain_047",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 6.0568,
+     "z": 4.8349
+    },
+    {
+     "x": 7.9989,
+     "z": 4.8349
+    }
+   ],
+   "length": 1.94
+  },
+  {
+   "id": "drain_051",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 7.7597,
+     "z": 4.8349
+    },
+    {
+     "x": 9.4467,
+     "z": 4.8349
+    }
+   ],
+   "length": 1.69
+  },
+  {
+   "id": "drain_055",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 8.9471,
+     "z": 2.8008
+    },
+    {
+     "x": 8.9471,
+     "z": 5.9515
+    }
+   ],
+   "length": 3.15
+  },
+  {
+   "id": "drain_058",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 7.5988,
+     "z": 5.7906
+    },
+    {
+     "x": 7.5935,
+     "z": 5.218
+    }
+   ],
+   "length": 0.57
+  },
+  {
+   "id": "drain_061",
+   "system": "drain",
+   "name_he": "ניקוז 2\"",
+   "radius": 0.05,
+   "points": [
+    {
+     "x": 0.1196,
+     "z": 5.2244
+    },
+    {
+     "x": 2.8808,
+     "z": 5.2244
+    }
+   ],
+   "length": 2.76
+  },
+  {
+   "id": "refrigerant_000",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 9.2392,
+     "z": 8.3221
+    },
+    {
+     "x": 9.2382,
+     "z": 8.4714
+    },
+    {
+     "x": 9.4287,
+     "z": 8.4714
+    },
+    {
+     "x": 9.4287,
+     "z": 8.3221
+    },
+    {
+     "x": 9.2392,
+     "z": 8.3221
+    }
+   ],
+   "length": 0.68
+  },
+  {
+   "id": "refrigerant_004",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 2.3283,
+     "z": 3.1945
+    },
+    {
+     "x": 2.3273,
+     "z": 4.2899
+    }
+   ],
+   "length": 1.1
+  },
+  {
+   "id": "refrigerant_005",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 2.3527,
+     "z": 4.2899
+    },
+    {
+     "x": 2.3537,
+     "z": 3.203
+    }
+   ],
+   "length": 1.09
+  },
+  {
+   "id": "refrigerant_006",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 2.3273,
+     "z": 4.3312
+    },
+    {
+     "x": 2.3273,
+     "z": 5.6996
+    },
+    {
+     "x": 1.2806,
+     "z": 5.707
+    }
+   ],
+   "length": 2.42
+  },
+  {
+   "id": "refrigerant_007",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 2.3527,
+     "z": 5.6996
+    },
+    {
+     "x": 2.3527,
+     "z": 4.3312
+    }
+   ],
+   "length": 1.37
+  },
+  {
+   "id": "refrigerant_008",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 1.2721,
+     "z": 5.9885
+    },
+    {
+     "x": 1.2806,
+     "z": 5.7324
+    },
+    {
+     "x": 2.3188,
+     "z": 5.7335
+    }
+   ],
+   "length": 1.29
+  },
+  {
+   "id": "refrigerant_016",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 1.1546,
+     "z": 6.051
+    },
+    {
+     "x": 1.1546,
+     "z": 4.5238
+    }
+   ],
+   "length": 1.53
+  },
+  {
+   "id": "refrigerant_025",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 1.1208,
+     "z": 6.0605
+    },
+    {
+     "x": 1.0911,
+     "z": 6.0848
+    },
+    {
+     "x": 0.1683,
+     "z": 6.0848
+    }
+   ],
+   "length": 0.96
+  },
+  {
+   "id": "refrigerant_031",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 2.0457,
+     "z": 3.148
+    },
+    {
+     "x": 2.0701,
+     "z": 3.1765
+    },
+    {
+     "x": 2.0701,
+     "z": 4.3269
+    }
+   ],
+   "length": 1.19
+  },
+  {
+   "id": "refrigerant_037",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 9.0942,
+     "z": 8.392
+    },
+    {
+     "x": 9.0942,
+     "z": 7.5771
+    }
+   ],
+   "length": 0.81
+  },
+  {
+   "id": "refrigerant_042",
+   "system": "refrigerant",
+   "name_he": "צנרת גז מיזוג",
+   "radius": 0.016,
+   "points": [
+    {
+     "x": 1.4647,
+     "z": 2.2611
+    },
+    {
+     "x": 2.1103,
+     "z": 2.2526
+    },
+    {
+     "x": 2.1103,
+     "z": 2.8717
+    }
+   ],
+   "length": 1.26
+  }
+ ],
+ "furniture": [
+  {
+   "id": "bath_tub",
+   "kind": "bathtub",
+   "room": "bathroom",
+   "name_he": "אמבטיה אקרילית 170/70",
+   "position": {
+    "x": 0.619,
+    "z": 5.404
+   },
+   "size": [
+    0.7,
+    0.55,
+    1.7
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "wc",
+   "kind": "toilet",
+   "room": "bathroom",
+   "name_he": "אסלה תלויה + מיכל הדחה סמוי",
+   "position": {
+    "x": 0.529,
+    "z": 6.864
+   },
+   "size": [
+    0.4,
+    0.42,
+    0.62
+   ],
+   "rotation": 90,
+   "illustrative": true
+  },
+  {
+   "id": "bath_vanity",
+   "kind": "vanity",
+   "room": "bathroom",
+   "name_he": "כיור רחצה + ארונית",
+   "position": {
+    "x": 2.369,
+    "z": 4.894
+   },
+   "size": [
+    0.62,
+    0.85,
+    0.48
+   ],
+   "rotation": 90,
+   "illustrative": true
+  },
+  {
+   "id": "washer",
+   "kind": "washing_machine",
+   "room": "bathroom",
+   "name_he": "מכונת כביסה — פינת כביסה",
+   "position": {
+    "x": 2.409,
+    "z": 6.694
+   },
+   "size": [
+    0.6,
+    0.85,
+    0.6
+   ],
+   "rotation": 90,
+   "illustrative": true
+  },
+  {
+   "id": "boiler",
+   "kind": "boiler",
+   "room": "service_balcony",
+   "name_he": "דוד שמש",
+   "position": {
+    "x": 0.699,
+    "z": 3.144
+   },
+   "size": [
+    0.62,
+    0.62,
+    1.5
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "condenser",
+   "kind": "condenser",
+   "room": "service_balcony",
+   "name_he": "מעבה מיזוג אוויר",
+   "position": {
+    "x": 1.849,
+    "z": 3.894
+   },
+   "size": [
+    0.9,
+    0.7,
+    0.35
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "drying_rack",
+   "kind": "drying_rack",
+   "room": "service_balcony",
+   "name_he": "מתקן כביסה",
+   "position": {
+    "x": 1.349,
+    "z": 3.444
+   },
+   "size": [
+    1.7,
+    0.05,
+    0.7
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "bed_main",
+   "kind": "bed_double",
+   "room": "bedroom",
+   "name_he": "מיטה זוגית",
+   "position": {
+    "x": 4.349,
+    "z": 3.944
+   },
+   "size": [
+    1.6,
+    0.55,
+    2.0
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "wardrobe_bed",
+   "kind": "wardrobe",
+   "room": "bedroom",
+   "name_he": "ארון בגדים",
+   "position": {
+    "x": 3.169,
+    "z": 5.344
+   },
+   "size": [
+    0.6,
+    2.3,
+    1.8
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "nightstand_a",
+   "kind": "nightstand",
+   "room": "bedroom",
+   "name_he": "שידה",
+   "position": {
+    "x": 5.599,
+    "z": 3.144
+   },
+   "size": [
+    0.45,
+    0.5,
+    0.4
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "bed_mamad",
+   "kind": "bed_single",
+   "room": "mamad",
+   "name_he": "מיטה יחיד",
+   "position": {
+    "x": 6.649,
+    "z": 4.344
+   },
+   "size": [
+    0.9,
+    0.5,
+    1.9
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "desk_mamad",
+   "kind": "desk",
+   "room": "mamad",
+   "name_he": "שולחן עבודה",
+   "position": {
+    "x": 8.749,
+    "z": 3.544
+   },
+   "size": [
+    0.6,
+    0.75,
+    1.3
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "wardrobe_mamad",
+   "kind": "wardrobe",
+   "room": "mamad",
+   "name_he": "ארון",
+   "position": {
+    "x": 8.949,
+    "z": 5.344
+   },
+   "size": [
+    0.6,
+    2.3,
+    1.2
+   ],
+   "rotation": 90,
+   "illustrative": true
+  },
+  {
+   "id": "sofa",
+   "kind": "sofa",
+   "room": "living",
+   "name_he": "ספה",
+   "position": {
+    "x": 10.449,
+    "z": 4.344
+   },
+   "size": [
+    0.9,
+    0.8,
+    2.2
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "tv_unit",
+   "kind": "tv_unit",
+   "room": "living",
+   "name_he": "יחידת טלוויזיה",
+   "position": {
+    "x": 13.249,
+    "z": 4.344
+   },
+   "size": [
+    0.45,
+    1.1,
+    1.8
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "coffee_table",
+   "kind": "coffee_table",
+   "room": "living",
+   "name_he": "שולחן סלון",
+   "position": {
+    "x": 11.849,
+    "z": 4.344
+   },
+   "size": [
+    0.7,
+    0.4,
+    1.2
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "dining_table",
+   "kind": "dining_table",
+   "room": "living",
+   "name_he": "פינת אוכל",
+   "position": {
+    "x": 12.349,
+    "z": 7.544
+   },
+   "size": [
+    1.6,
+    0.75,
+    0.95
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "kitchen_run_west",
+   "kind": "kitchen_counter",
+   "room": "kitchen",
+   "name_he": "ארונות מטבח — קיר מערבי",
+   "position": {
+    "x": 9.889,
+    "z": 8.794
+   },
+   "size": [
+    0.6,
+    0.9,
+    2.9
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "kitchen_run_south",
+   "kind": "kitchen_counter",
+   "room": "kitchen",
+   "name_he": "ארונות מטבח — קיר דרומי",
+   "position": {
+    "x": 10.849,
+    "z": 9.944
+   },
+   "size": [
+    2.5,
+    0.9,
+    0.6
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "kitchen_uppers",
+   "kind": "kitchen_upper",
+   "room": "kitchen",
+   "name_he": "ארונות עליונים",
+   "position": {
+    "x": 10.849,
+    "z": 10.094
+   },
+   "size": [
+    2.5,
+    0.7,
+    0.32
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "cooktop",
+   "kind": "cooktop",
+   "room": "kitchen",
+   "name_he": "כיריים גז",
+   "position": {
+    "x": 9.889,
+    "z": 8.944
+   },
+   "size": [
+    0.58,
+    0.05,
+    0.5
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "kitchen_sink",
+   "kind": "kitchen_sink",
+   "room": "kitchen",
+   "name_he": "כיור מטבח",
+   "position": {
+    "x": 10.699,
+    "z": 9.944
+   },
+   "size": [
+    0.8,
+    0.05,
+    0.45
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "fridge",
+   "kind": "fridge",
+   "room": "kitchen",
+   "name_he": "מקרר",
+   "position": {
+    "x": 9.889,
+    "z": 7.694
+   },
+   "size": [
+    0.7,
+    1.85,
+    0.7
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "dishwasher",
+   "kind": "dishwasher",
+   "room": "kitchen",
+   "name_he": "מדיח כלים",
+   "position": {
+    "x": 11.399,
+    "z": 9.944
+   },
+   "size": [
+    0.6,
+    0.85,
+    0.58
+   ],
+   "rotation": 0,
+   "illustrative": true
+  },
+  {
+   "id": "comms_cabinet",
+   "kind": "cabinet_panel",
+   "room": "living",
+   "name_he": "ארון תקשורת",
+   "position": {
+    "x": 12.849,
+    "z": 9.394
+   },
+   "size": [
+    0.45,
+    0.5,
+    0.12
+   ],
+   "rotation": 0,
+   "illustrative": true
+  }
+ ],
+ "dimensions": [
+  {
+   "label_he": "רוחב הדירה הכולל",
+   "value_cm": 1377,
+   "axis": "x",
+   "from": 0.0,
+   "to": 13.767
+  },
+  {
+   "label_he": "רוחב עד קיר המסתור",
+   "value_cm": 1121,
+   "axis": "x",
+   "from": 2.561,
+   "to": 13.767
+  },
+  {
+   "label_he": "רוחב מסדרון-מזרח",
+   "value_cm": 1016,
+   "axis": "x",
+   "from": 3.607,
+   "to": 13.767
+  },
+  {
+   "label_he": "חדר דיור + מטבח — עומק",
+   "value_cm": 738,
+   "axis": "z",
+   "from": 2.871,
+   "to": 10.251
+  },
+  {
+   "label_he": "חדר דיור — עומק",
+   "value_cm": 642,
+   "axis": "z",
+   "from": 2.871,
+   "to": 9.288
+  },
+  {
+   "label_he": "שינה + מסדרון — עומק",
+   "value_cm": 447,
+   "axis": "z",
+   "from": 2.821,
+   "to": 7.291
+  },
+  {
+   "label_he": "מרפסת שמש — רוחב חוץ",
+   "value_cm": 438,
+   "axis": "x",
+   "from": 9.404,
+   "to": 13.787
+  },
+  {
+   "label_he": "מרפסת שמש — עומק",
+   "value_cm": 233,
+   "axis": "z",
+   "from": 0.226,
+   "to": 2.551
+  },
+  {
+   "label_he": "חדר שינה — רוחב",
+   "value_cm": 302,
+   "axis": "x",
+   "from": 2.861,
+   "to": 5.877
+  },
+  {
+   "label_he": "חדר שינה — עומק",
+   "value_cm": 318,
+   "axis": "z",
+   "from": 2.821,
+   "to": 6.001
+  },
+  {
+   "label_he": "ממ\"ד — רוחב",
+   "value_cm": 315,
+   "axis": "x",
+   "from": 6.176,
+   "to": 9.327
+  },
+  {
+   "label_he": "ממ\"ד — עומק",
+   "value_cm": 296,
+   "axis": "z",
+   "from": 2.921,
+   "to": 5.882
+  },
+  {
+   "label_he": "חדר רחצה — רוחב",
+   "value_cm": 254,
+   "axis": "x",
+   "from": 0.219,
+   "to": 2.761
+  },
+  {
+   "label_he": "חדר רחצה — עומק",
+   "value_cm": 271,
+   "axis": "z",
+   "from": 4.539,
+   "to": 7.251
+  },
+  {
+   "label_he": "מטבח — רוחב",
+   "value_cm": 240,
+   "axis": "x",
+   "from": 9.586,
+   "to": 11.987
+  },
+  {
+   "label_he": "מסתור — רוחב",
+   "value_cm": 233,
+   "axis": "x",
+   "from": 0.219,
+   "to": 2.561
+  },
+  {
+   "label_he": "חלון חדר שינה",
+   "value_cm": 130,
+   "axis": "x",
+   "from": 3.666,
+   "to": 4.967
+  },
+  {
+   "label_he": "דלת כניסה",
+   "value_cm": 100,
+   "axis": "x",
+   "from": 12.286,
+   "to": 13.286
+  },
+  {
+   "label_he": "דלת מרפסת — פתח בנוי",
+   "value_cm": 230,
+   "axis": "x",
+   "from": 10.636,
+   "to": 12.937
+  },
+  {
+   "label_he": "חלון אל המסתור",
+   "value_cm": 150,
+   "axis": "x",
+   "from": 0.99,
+   "to": 2.489
+  },
+  {
+   "label_he": "דלת חדר רחצה",
+   "value_cm": 80,
+   "axis": "z",
+   "from": 6.258,
+   "to": 7.058
+  }
+ ],
+ "notes_he": [
+  "סימון אביזרי ריהוט, כלים סניטרים וכדומה הינו להמחשה בלבד.",
+  "המידות מתייחסות לחלקי בניין שונים בין קירות בטון/בניה/גבס ללא ציפויים.",
+  "כל התכניות כפופות לשינויים עפ\"י החלטת הקבלן ו/או יועצי הפרויקט.",
+  "במידה ויותקן תנור חימום במקלחת המתז יהיה בטמפ' 141 מעלות."
+ ]
+}
